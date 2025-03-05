@@ -1,3 +1,17 @@
 h1{
   color: blue;
 }
+
+/* tablet - laptop */
+@media (min-width: 768px){ 
+  h1{
+    color: red;
+  }
+}
+
+/* monitor */
+@media (min-width: 1280px){
+  h1{
+    color: red;
+  }
+}
