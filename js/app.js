@@ -1,11 +1,19 @@
-const collab = document.querySelector('.collab');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("hamburger");
+  const closeBtn = document.getElementById("close-menu");
+  const offcanvas = document.getElementById("offcanvas");
 
-const data = ['Taniku Mart','Sawah Sejahtera','GreenHarvest'];
+  menuBtn.addEventListener("click", function () {
+      offcanvas.classList.add("open");
+  });
 
-const collabComponent = (data) => {
-  return `
-      <p>${data}</p>
-  `
-}
+  closeBtn.addEventListener("click", function () {
+      offcanvas.classList.remove("open");
+  });
 
-collab.innerHTML = data.map(el => collabComponent(el)).join('')
+  document.addEventListener("click", function (event) {
+      if (!offcanvas.contains(event.target) && !menuBtn.contains(event.target)) {
+          offcanvas.classList.remove("open");
+      }
+  });
+});
