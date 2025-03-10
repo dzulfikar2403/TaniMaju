@@ -237,7 +237,14 @@ body {
   font-weight: 500;
   font-size: small;
   margin-top: 4px;
+  transition: all 0.2s;
 }
+
+#online-blog .card-blog-hero .lanjut-baca:hover {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
 
 .list-subcard {
   padding: 1rem;
@@ -310,6 +317,12 @@ body {
   font-weight: 500;
   font-size: small;
   margin-top: 4px;
+  transition: all .2s;
+}
+
+.subcard-blog .lanjut-baca:hover {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 #farmerSupportCard {
