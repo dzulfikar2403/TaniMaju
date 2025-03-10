@@ -1,17 +1,19 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("hamburger");
+  const closeBtn = document.getElementById("close-menu");
+  const offcanvas = document.getElementById("offcanvas");
 
-const scroller = document.querySelector(".scroller");
-console.log(scroller);
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
+  menuBtn.addEventListener("click", function () {
+      offcanvas.classList.add("open");
+  });
 
-prev.addEventListener("click", function () {
-  console.log('prev');
+  closeBtn.addEventListener("click", function () {
+      offcanvas.classList.remove("open");
+  });
 
-  scroller.scrollLeft -= 300;
-});
-
-next.addEventListener("click", function () {
-  console.log('next');
-  
-  scroller.scrollLeft += 300;
+  document.addEventListener("click", function (event) {
+      if (!offcanvas.contains(event.target) && !menuBtn.contains(event.target)) {
+          offcanvas.classList.remove("open");
+      }
+  });
 });
