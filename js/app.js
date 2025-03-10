@@ -1,11 +1,17 @@
-const collab = document.querySelector('.collab');
 
-const data = ['Taniku Mart','Sawah Sejahtera','GreenHarvest'];
+const scroller = document.querySelector(".scroller");
+console.log(scroller);
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
 
-const collabComponent = (data) => {
-  return `
-      <p>${data}</p>
-  `
-}
+prev.addEventListener("click", function () {
+  console.log('prev');
 
-collab.innerHTML = data.map(el => collabComponent(el)).join('')
+  scroller.scrollLeft -= 300;
+});
+
+next.addEventListener("click", function () {
+  console.log('next');
+  
+  scroller.scrollLeft += 300;
+});
