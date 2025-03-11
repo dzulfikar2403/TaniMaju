@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -16,18 +20,18 @@ body {
   --color-secondary: #273d2d;
 }
 
-.navbar {
+.Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
 }
 
-.navbar img {
+.Navbar img {
   width: 5rem;
 }
 
-.navbar img:nth-child(2) {
+.Navbar img:nth-child(2) {
   width: 22px;
 }
 
@@ -151,6 +155,8 @@ body {
   border: 1.5px solid black;
   border-radius: 99px;
   width: 7rem;
+  text-decoration: none;
+  color: black;
   margin-left: auto;
   display: flex;
   justify-content: center;
@@ -266,13 +272,13 @@ body {
 }
 
 .subcard-blog:nth-child(1) .img {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/public/images/pelatihan_5.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/public/images/artikel_1.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .subcard-blog:nth-child(2) .img {
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/public/images/pelatihan_2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("/public/images/artikel_2.jpg");
   background-position: center;
   background-size: cover;
   }
@@ -372,14 +378,24 @@ body {
   position: relative;
   width: 100%;
   height: 18rem;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/public/images/pelatihan_1.jpg);
-  background-size: cover;
-  background-position: center;
   border-radius: 1rem;
   text-decoration: none;
   color: white;
   margin: 1rem 0;
 }
+
+#training-sec .grid-list a:nth-child(1){
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/public/images/pelatihan_1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#training-sec .grid-list a:nth-child(2){
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(/public/images/pelatihan_4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 #training-sec .grid-list .contain-overlay {
   padding: 8px;
 }
@@ -619,7 +635,7 @@ footer .socmed-container img {
   }
 }
 
-/* tablet - laptop */
+/* tablet */
 @media (min-width: 768px) {
   #hero {
     position: relative;
@@ -630,44 +646,6 @@ footer .socmed-container img {
   #hero .rounded-bg {
     width: 70rem;
     top: -22rem;
-  }
-
-  #hero .img-hero {
-    position: absolute;
-    display: flex;
-    left: 8rem;
-    bottom: 0;
-    width: 12rem;
-    z-index: 10px;
-  }
-
-  #hero .img-hero:nth-child(2) {
-    position: absolute;
-    display: flex;
-    left: 4rem;
-    top: 0;
-    width: 15rem;
-    z-index: 10px;
-  }
-
-  #hero .img-hero:nth-child(3) {
-    position: absolute;
-    display: flex;
-    top: 0;
-    z-index: 10px;
-    transform: translateX(255%);
-    right: 0rem;
-    width: 20rem;
-  }
-
-  #hero .img-hero:nth-child(4) {
-    position: absolute;
-    display: flex;
-    right: 0rem;
-    bottom: 0;
-    transform: translateX(500%);
-    z-index: 10px;
-    width: 10rem;
   }
 
   #hero h2 {
@@ -826,6 +804,14 @@ footer .socmed-container img {
     font-size: xx-large;
   }
 
+  #training-sec .grid-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+
   #they-said h2 {
     font-size: 1.8rem;
   }
@@ -844,12 +830,6 @@ footer .socmed-container img {
     flex-direction: row;
   }
 
-  #training-sec .grid-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 1rem;
-    gap: 1rem;
-  }
 
   #faq {
     padding: 4rem;
@@ -923,9 +903,45 @@ footer .socmed-container img {
   }
 }
 
-/* monitor */
-@media (min-width: 1280px) {
-  h1 {
-    color: red;
+/* laptop -  monitor */
+@media (min-width: 1024px) {
+
+  
+  #hero .img-hero {
+    position: absolute;
+    display: flex;
+    left: 8rem;
+    bottom: 0;
+    width: 12rem;
+    z-index: 10px;
+  }
+
+  #hero .img-hero:nth-child(2) {
+    position: absolute;
+    display: flex;
+    left: 4rem;
+    top: 0;
+    width: 15rem;
+    z-index: 10px;
+  }
+
+  #hero .img-hero:nth-child(3) {
+    position: absolute;
+    display: flex;
+    top: 0;
+    z-index: 10px;
+    transform: translateX(255%);
+    right: 0rem;
+    width: 20rem;
+  }
+
+  #hero .img-hero:nth-child(4) {
+    position: absolute;
+    display: flex;
+    right: 0rem;
+    bottom: 0;
+    transform: translateX(500%);
+    z-index: 10px;
+    width: 10rem;
   }
 }
