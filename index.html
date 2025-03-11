@@ -8,10 +8,62 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <nav class="Navbar">
-      <img src="/public/images/logo_tanimaju.png" alt="icon-TaniMaju" />
-      <img src="/public/images/hamburger-ico.svg" alt="icon-hamburger" />
-    </nav>
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="/index.html" class="logo">
+          <img src="/public/images/logo_tanimaju.png" alt="Logo TaniMaju" />
+        </a>
+        <nav class="nav-menu">
+          <div class="nav-items">
+            <img src="/public/images/laptop-icon.svg" alt="" />
+            <a href="/index.html#about">About</a>
+          </div>
+          <div class="nav-items">
+            <img src="/public/images/newspaper-icon.svg" alt="" />
+            <a href="/index.html#online-blog">Artikel</a>
+          </div>
+          <div class="nav-items">
+            <img src="/public/images/tractor-icon.svg" alt="" />
+            <a href="/index.html#training-sec">Pelatihan</a>
+          </div>
+          <div class="nav-items">
+            <img src="/public/images/faq-icon.svg" alt="" />
+            <a href="/index.html#faq">FAQs</a>
+          </div>
+        </nav>
+        <!-- <a href="#" class="btn-login">
+          <span>Masuk</span>
+          <div class="btn-icon">
+            <img src="/public/images/arrow-right-icon.svg" alt="Arrow" />
+          </div>
+        </a> -->
+        <button class="menu-btn" id="hamburger">
+          <img src="/public/images/hamburger-ico.svg" alt="Menu" />
+        </button>
+      </div>
+    </header>
+
+    <div class="offcanvas-menu" id="offcanvas">
+      <button class="close-btn" id="close-menu">&times;</button>
+      <nav class="offcanvas-nav">
+        <div class="offcanvas-items">
+          <img src="/public/images/laptop-icon.svg" alt="" />
+          <a href="/index.html#about">About</a>
+        </div>
+        <div class="offcanvas-items">
+          <img src="/public/images/newspaper-icon.svg" alt="" />
+          <a href="/index.html#online-blog">Artikel</a>
+        </div>
+        <div class="offcanvas-items">
+          <img src="/public/images/tractor-icon.svg" alt="" />
+          <a href="/index.html#training-sec">Pelatihan</a>
+        </div>
+        <div class="offcanvas-items">
+          <img src="/public/images/faq-icon.svg" alt="" />
+          <a href="/index.html#faq">FAQs</a>
+        </div>
+      </nav>
+    </div>
 
     <section id="hero">
       <img class="rounded-bg" src="/public/images/rounded-bg.png" alt="rounded-bg" />

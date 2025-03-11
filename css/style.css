@@ -20,19 +20,143 @@ body {
   --color-secondary: #273d2d;
 }
 
-.Navbar {
+.navbar {
+  width: 100%;
+  background-color: transparent;
+  padding: 12px 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 8rem;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 0 16px;
 }
 
-.Navbar img {
-  width: 5rem;
+.nav-items {
+  display: flex;
+  gap: 9px;
+  align-items: center
 }
 
-.Navbar img:nth-child(2) {
-  width: 22px;
+.nav-menu {
+  display: flex;
+  gap: 70px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.offcanvas-menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.offcanvas-menu.open {
+  right: 0;
+}
+
+.close-btn {
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.offcanvas-nav a {
+  display: block;
+  margin: 15px 0;
+  font-size: 18px;
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.offcanvas-items {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu, .btn-login {
+      display: none;
+  }
+
+  .menu-btn {
+      display: block;
+  }
+}
+
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: var(--color-secondary);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #1e3124;
+}
+
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.btn-icon img {
+  width: 14px;
+  height: 12px;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn img {
+  width: 24px;
+  height: 24px;
 }
 
 #hero {
@@ -632,6 +756,16 @@ footer .socmed-container img {
   }
   100% {
     transform: rotate(180deg) scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu, .btn-login {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
   }
 }
 
